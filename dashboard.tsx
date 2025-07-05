@@ -2,7 +2,8 @@
 
 import * as React from "react"
 import { Bar, BarChart, Line, LineChart, ResponsiveContainer, XAxis, YAxis, Tooltip } from "recharts"
-import { ArrowUpRight, Bot, Globe2, LayoutDashboard, Moon, Settings, Sun, Users } from "lucide-react"
+import { ArrowUpRight, Bot, Globe2, LayoutDashboard, Moon, Settings, Sun, Users, BarChart3 } from "lucide-react"
+import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -173,6 +174,12 @@ export default function DashboardPage() {
       <div className="flex items-center justify-between space-y-2">
         <h2 className="text-3xl font-bold tracking-tight text-primary">ASA Space Admin Portal</h2>
         <div className="flex items-center space-x-2">
+          <Link href="/powerbi">
+            <Button variant="outline">
+              <BarChart3 className="mr-2 h-4 w-4" />
+              PowerBI
+            </Button>
+          </Link>
           <Button variant="outline" size="icon" onClick={toggleTheme}>
             {isDarkMode ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
           </Button>
